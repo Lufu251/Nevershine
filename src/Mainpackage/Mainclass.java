@@ -233,7 +233,6 @@ public class Mainclass {
 		Türeoffenoben = Texture.createTexture(ImageIO.read(new File("data\\Türoffenoben.png")));
 		Türeoffenunten = Texture.createTexture(ImageIO.read(new File("data\\Türoffenunten.png")));
 		Türitem = Texture.createTexture(ImageIO.read(new File("data\\Türitem.png")));
-		Feuerhintergrund = Texture.createTexture(ImageIO.read(new File("data\\Feuerhintergrund.png")));
 		
 		for (int c = 0; c < Mainclass.xinventar; c++) {
 			for (int d = 0; d < Mainclass.yinventar; d++) {

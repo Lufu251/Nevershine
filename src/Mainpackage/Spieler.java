@@ -97,12 +97,12 @@ public class Spieler {
 
 		for (int r = 1; r < Mainclass.gravitation + 1; r++) {
 			if (Mainclass.array1[(xp)/ Mainclass.blockgrösse]
-								[(yp - r) / Mainclass.blockgrösse].content.begehbar() == false && oben == false) {
+								[(yp - r +1) / Mainclass.blockgrösse].content.begehbar() == false && oben == false) {
 				oben = true;
 				move = r;
 			}
 			if (Mainclass.array1[(xp + 25)/ Mainclass.blockgrösse]
-								[(yp - r) / Mainclass.blockgrösse].content.begehbar() == false && oben == false) {
+								[(yp - r +1) / Mainclass.blockgrösse].content.begehbar() == false && oben == false) {
 				oben = true;
 				move = r;
 			}
@@ -120,12 +120,12 @@ public class Spieler {
 
 		for (int r = 1; r < Mainclass.gravitation + 1; r++) {
 			if (Mainclass.array1[(xp)/ Mainclass.blockgrösse]
-								[(yp + 50 + r) / Mainclass.blockgrösse].content.begehbar() == false && unten == false) {
+								[(yp + 50 + r -1) / Mainclass.blockgrösse].content.begehbar() == false && unten == false) {
 				unten = true;
 				move = r;
 			}
 			if (Mainclass.array1[(xp + 25)/ Mainclass.blockgrösse]
-								[(yp + 50 + r) / Mainclass.blockgrösse].content.begehbar() == false && unten == false) {
+								[(yp + 50 + r -1) / Mainclass.blockgrösse].content.begehbar() == false && unten == false) {
 				unten = true;
 				move = r;
 			}
@@ -146,12 +146,19 @@ public class Spieler {
 
 		for (int r = 1; r < Mainclass.speed + 1; r++) {
 			if (Mainclass.array1[(xp + r + 25)/ Mainclass.blockgrösse]
-								[(yp) / Mainclass.blockgrösse].content.begehbar() == false && rechts == false) {
+								[(yp +1) / Mainclass.blockgrösse].content.begehbar() == false && rechts == false) {
 				rechts = true;
 				move = r;
 			}
+			
 			if (Mainclass.array1[(xp + r + 25)/ Mainclass.blockgrösse]
-								[(yp + 50) / Mainclass.blockgrösse].content.begehbar() == false && rechts == false) {
+								[(yp + 25) / Mainclass.blockgrösse].content.begehbar() == false && rechts == false) {
+				rechts = true;
+				move = r;
+			}
+			
+			if (Mainclass.array1[(xp + r + 25)/ Mainclass.blockgrösse]
+								[(yp + 50 -1) / Mainclass.blockgrösse].content.begehbar() == false && rechts == false) {
 				rechts = true;
 				move = r;
 			}
@@ -170,12 +177,20 @@ public class Spieler {
 
 		for (int r = 1; r < Mainclass.speed + 1; r++) {
 			if (Mainclass.array1[(xp - r)/ Mainclass.blockgrösse]
-								[(yp) / Mainclass.blockgrösse].content.begehbar() == false && links == false) {
+								[(yp +1) / Mainclass.blockgrösse].content.begehbar() == false && links == false) {
 				links = true;
 				move = r;
 			}
+			
 			if (Mainclass.array1[(xp -r)/ Mainclass.blockgrösse]
-								[(yp + 50) / Mainclass.blockgrösse].content.begehbar() == false && links == false) {
+								[(yp + 25) / Mainclass.blockgrösse].content.begehbar() == false && links == false) {
+				links = true;
+				move = r;
+			}
+			
+			
+			if (Mainclass.array1[(xp -r)/ Mainclass.blockgrösse]
+								[(yp + 50 -1) / Mainclass.blockgrösse].content.begehbar() == false && links == false) {
 				links = true;
 				move = r;
 			}
